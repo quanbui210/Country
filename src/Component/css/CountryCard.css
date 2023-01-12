@@ -58,7 +58,7 @@
 
   @media only screen and (max-width: 508px) {
     .country-card {
-      margin: 30px;
+      margin: 30px  0;
       min-width: 300px !important;
       box-shadow: 0 0 2px 2px rgb(255, 255, 255) !important;
     }
