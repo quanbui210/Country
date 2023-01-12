@@ -1,6 +1,9 @@
 ![image](https://user-images.githubusercontent.com/89993167/212177018-aaa6b18a-bcf0-4910-9e57-d52fec735014.png)
 
+note: According to the assignment requirement, there should be only 5 countries displayed at once, but can I show 8?, since it will look better because I use small reactangle card component :(
+
 ![image](https://user-images.githubusercontent.com/89993167/212177135-5b78b92e-0442-4fa2-b726-fb4c2b4ca8a0.png)
+if user clicks view country icon
 
 ![image](https://user-images.githubusercontent.com/89993167/212178185-62b21182-c092-41e9-9770-a1fa922aedb9.png)
 
