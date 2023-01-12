@@ -32,12 +32,14 @@ const CountryList = ({allCountries, countries, setCountries}) => {
             <CountryCard country={country}/>
         </li>))}
         </ul>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
      <Pagination 
         className="pagination" 
         count={Math.ceil(allCountries.length/perPage)}  
         page={page} 
         onChange={handleChange} 
      />
+    </div>
       </> 
      }
 

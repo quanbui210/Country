@@ -32,18 +32,20 @@ const Country = () => {
     const navigate = useNavigate();
     const [country, setCountry] = useState(null)
     const [expanded, setExpanded] = React.useState(false);
+    const {data} = useFetch(`https://restcountries.com/v3.1/name/${name}`)
     // const officialNativeName = Object.values(country.nativeName).find(({ official }) => official);
     const handleExpandClick = () => {
-        setExpanded(!expanded);
-      };
-
-    useEffect(() => {
-        axios.get(`https://restcountries.com/v3.1/name/${name}`)
-        .then(response => setCountry(response.data[0]))
-        window.scrollTo(0, 0)
-    }, [name])
+      setExpanded(!expanded);
+    };
+    
+    useEffect(()=>{
+      if (data.length === 0) {
+        return
+      } else {
+        setCountry(data[0])
+      }
+    }, [data])    
     if (country === null) return
-
 
     return (
     <div className="country-container">
