@@ -1,0 +1,60 @@
+.country-name {
+    color: rgb(54, 54, 54)
+}
+
+.return-btn {
+    border: none;
+    background-color: #fff;
+}
+
+.return-btn:hover {
+    opacity: 0.4;
+}
+
+.detail {
+    font-size: 14px;
+    color: rgb(70, 70, 70) !important;
+    font-style: italic;
+    font-weight: 700;
+}
+.country-border-list {
+    list-style-type: none;
+}
+
+.country-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.country-container-card {
+    box-shadow: 0 0 3px 3px rgb(139, 139, 139) !important;
+}
+
+
+@media only screen and (max-width: 508px) {
+    .detail {
+        font-size: 10px;
+        color: rgb(70, 70, 70) !important;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .country-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        line-height: 22px;
+    }
+    
+    .return-btn {
+        border: none;
+        font-size: 10px;
+        background-color: #fff;
+    }
+}

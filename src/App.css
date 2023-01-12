@@ -1,38 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
 .App {
+  text-align: center;
+
+}
+
+.app-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.region-select-btn {
+  border: none;
+  background-color: #ccc;
+  margin-right: 12px;
+  margin-top: 20px;
+  color: rgb(3, 11, 119);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.region-select-btn:hover {
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.region-container {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.go-back-btn {
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.go-back-btn:hover {
+  color: #fff;
+  background-color: rgb(63, 63, 63);
 }
