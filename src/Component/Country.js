@@ -43,6 +43,7 @@ const Country = () => {
         return
       } else {
         setCountry(data[0])
+        window.scrollTo(0,0)
       }
     }, [data])    
     if (country === null) return
