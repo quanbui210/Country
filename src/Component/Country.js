@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import { useNavigate} from 'react-router-dom'
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
-
+import useFetch from './Hook/useFetch'
 
 
 const ExpandMore = styled((props) => {
@@ -40,6 +40,7 @@ const Country = () => {
     useEffect(() => {
         axios.get(`https://restcountries.com/v3.1/name/${name}`)
         .then(response => setCountry(response.data[0]))
+        window.scrollTo(0, 0)
     }, [name])
     if (country === null) return
 

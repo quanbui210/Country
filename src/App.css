@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
-.App {
-
-  text-align: center;
-}
-
-.app-container {
-  text-align: center;
-}
-
 .region-select-btn {
   border: none;
   background-color: #ccc;
@@ -19,13 +10,9 @@
 
 
 .region-select-btn:hover {
-  color: #fff;
+  color: rgb(235, 235, 235);
 }
 
-
-.region-container {
-  text-align: center;
-}
 
 .go-back-btn {
   border: 1px solid #ccc;

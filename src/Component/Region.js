@@ -4,21 +4,24 @@ import Pagination from '@mui/material/Pagination';
 import './css/CountryList.css'
 import { useParams, useNavigate } from 'react-router-dom';
 import CountryCard from './CountryCard'
+import useFetch from './Hook/useFetch'
+
 
 const Region = ({allCountries, countries, setCountries}) => {
     const navigate = useNavigate()
     const [page, setPage] = useState(1);
     const perPage = 8;
     const {region} = useParams()
-    const [continent, setContinent] = useState(null)
+    // const [continent, setContinent] = useState(null)
+    const {data: continent} = useFetch(`https://restcountries.com/v3.1/region/${region}`)
 
-    useEffect(() => {
-        axios.get(`https://restcountries.com/v3.1/region/${region}`)
-        .then(response => {
-            setContinent(response.data)
-            console.log(response.data)
-        })
-    }, [region])
+    // useEffect(() => {
+    //     axios.get(`https://restcountries.com/v3.1/region/${region}`)
+    //     .then(response => {
+    //         setContinent(response.data)
+    //         console.log(response.data)
+    //     })
+    // }, [region])
     if (continent === null) return
 
 
@@ -31,7 +34,7 @@ const Region = ({allCountries, countries, setCountries}) => {
 
       return (
         <>
-        <div className="region-container">
+        <div style={{textAlign: 'center'}}>
         <h1>{continent.length} Countries in {region}</h1>
         <button className='go-back-btn' onClick={
             () => navigate('/')
