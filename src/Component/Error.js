@@ -9,7 +9,7 @@ const Error = () => {
         left: '50%',
         transform: 'translate(-50%, -50%)'
     }}>
-        <h1>Write a more specific country name before press enter, to many results {':('}</h1>
+        <h1>Write a more specific country name before press enter, too many results {':('}</h1>
         <button 
             style={{
                 padding: '4px',
