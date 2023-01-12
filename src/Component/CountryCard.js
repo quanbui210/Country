@@ -20,7 +20,7 @@ const CountryCard = ({country}) => {
             image={country.flags.png}
         />
         <CardContent>
-            <h3 style={{minHeight: '40px'}}>
+            <h3 style={{minHeight: '50px'}}>
             {country.name.common}
             </h3>
             <div className="card-info" variant="body2" color="text.secondary">
