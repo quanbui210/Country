@@ -51,7 +51,7 @@ const App = () => {
             onChange={handleFilterChange} 
             disabled={error}
             />
-      {error ? <h3>No Country Match Your Search</h3> : <>
+      {error ? <h3 style={{textAlign: 'center'}}>No Country Match Your Search</h3> : <>
           <h1 style={{textAlign: 'center'}}>All Countries</h1>
           <CountryList 
             newFilter={newFilter} 
