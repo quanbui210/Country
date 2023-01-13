@@ -49,12 +49,13 @@ const Country = () => {
     }, [data])    
     if (country === null) return
 
+
     return (
       <Fragment>
-        {loading ?  
-          <h3 style={{textAlign: 'center'}}>
-              Loading.....
-          </h3> : 
+          {loading ?  
+            <Box className='country-container'>
+              <CircularProgress />
+            </Box> :  
           <div className="country-container">
             <Card className="country-container-card" sx={{ maxWidth: 345 }}>
               <CardHeader

@@ -25,7 +25,7 @@ const Region = ({allCountries, countries, setCountries}) => {
       return (
         <Fragment>
             {loading ?  
-                <Box sx={{ display: 'flex' }}>
+                <Box className='country-container'>
                     <CircularProgress />
                 </Box> : 
             <>
