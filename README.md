@@ -22,7 +22,7 @@ note: According to the assignment requirement, there should be only 5 countries 
 
 ![image](https://user-images.githubusercontent.com/89993167/212177542-b89d4504-70e4-4e94-bd83-2657d7976c39.png)
 
-5. If user types something nonsense in the input, an error message will shown
+5. If user types something nonsense in the input, an error message will shown and the search button will be disabled
 
 6. If user types a full valid country name and press Enter (or click Search Icon), navigate to the Country component
 
