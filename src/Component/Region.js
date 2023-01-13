@@ -14,7 +14,7 @@ const Region = ({allCountries, countries, setCountries}) => {
     const perPage = 8;
     const {region} = useParams()
     const {data: continent, loading} = useFetch(`https://restcountries.com/v3.1/region/${region}`)
-
+    console.log(loading)
     const handleChange = (event, value) => {
         setPage(value);
     };

@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, Fragment } from 'react'
 import CountryList from './Component/CountryList'
 import Filter from './Component/Filter'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
 import useFetch from './Component/Hook/useFetch'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 
 
 
@@ -12,8 +15,8 @@ const App = () => {
   const [countries, setCountries] = useState([])
   const [newFilter, setNewFilter] = useState('')
   const [error, setError] = useState(false)
-  const {data: allCountries} = useFetch('https://restcountries.com/v3.1/all')
-
+  const {data: allCountries, loading} = useFetch('https://restcountries.com/v3.1/all')
+  console.log(loading)
 
   const handleFilterChange = (event) => {
     setNewFilter(event.target.value)
@@ -34,6 +37,11 @@ const App = () => {
   }
   const regions = [...new Set(allCountries.map((country) => country.region))];
   return (
+    <Fragment>
+      {loading ?  
+        <Box className='country-container'>
+          <CircularProgress />
+        </Box> : 
     <>
       <div style={{textAlign: 'center'}}>
         {regions.map(region => 
@@ -58,8 +66,9 @@ const App = () => {
             allCountries={allCountries} 
             countries={countries} 
             setCountries={setCountries} />
-        </>}
-    </>
+        </>} 
+    </> }
+    </Fragment>
   )
 }
 
