@@ -14,10 +14,6 @@ const CountryList = ({allCountries, countries, setCountries}) => {
 
     const pagedCountries = allCountries.slice((page - 1) * perPage, page * perPage);
 
-    // if (countries.length === 0) {
-    //     return <h1>Error</h1>
-    // }
-
     if (countries.length > 0 && countries.length < 8) {
        return <ul className='country-list'>
        {countries.map(country => (<li className='list-container' key={Math.random() * 100}>

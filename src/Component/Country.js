@@ -34,7 +34,6 @@ const Country = () => {
     const [country, setCountry] = useState(null)
     const [expanded, setExpanded] = React.useState(false);
     const {data, loading} = useFetch(`https://restcountries.com/v3.1/name/${name}`)
-    console.log(loading)
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
@@ -98,7 +97,7 @@ const Country = () => {
               <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <ul>
-                        <li>Sub-region: {country.subregion}</li>
+                        <li>Sub-region: {country.subregion ? country.subregion : 'No sub region'}</li>
                         <li>Area: {country.area}</li>
                         <li>Population: {country.population}</li>
                         <li>Time Zone: {country.timezones[0]}</li>

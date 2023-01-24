@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import CountryList from './Component/CountryList'
 import Filter from './Component/Filter'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 import './App.css'
 import useFetch from './Component/Hook/useFetch'
 import CircularProgress from '@mui/material/CircularProgress';
@@ -38,36 +38,36 @@ const App = () => {
   const regions = [...new Set(allCountries.map((country) => country.region))];
   return (
     <Fragment>
-      {loading ?  
-        <Box className='country-container'>
-          <CircularProgress />
-        </Box> : 
-    <>
-      <div style={{textAlign: 'center'}}>
-        {regions.map(region => 
-        <button
-          className='region-select-btn'
-          key={region}
-          onClick={() => navigate(`/region/${region}`)}
-        >
-          {region}
-        </button> )}
-      </div>
-          <Filter 
-            allCountries={allCountries} 
-            value={newFilter} 
-            onChange={handleFilterChange} 
-            disabled={error}
-            />
-      {error ? <h3 style={{textAlign: 'center'}}>No Country Match Your Search</h3> : <>
-          <h1 style={{textAlign: 'center'}}>All Countries</h1>
-          <CountryList 
-            newFilter={newFilter} 
-            allCountries={allCountries} 
-            countries={countries} 
-            setCountries={setCountries} />
-        </>} 
-    </> }
+        {loading ?  
+          <Box className='country-container'>
+            <CircularProgress />
+          </Box> : 
+      <>
+        <div style={{textAlign: 'center', margin: '36px 0'}}>
+          {regions.map(region => 
+          <NavLink
+            className='region-select-btn'
+            key={region}
+            to={`/region/${region}`}
+          >
+            {region}
+          </NavLink> )}
+        </div>
+            <Filter 
+              allCountries={allCountries} 
+              value={newFilter} 
+              onChange={handleFilterChange} 
+              disabled={error}
+              />
+        {error ? <h3 style={{textAlign: 'center'}}>No Country Match Your Search</h3> : <>
+            <h1 style={{textAlign: 'center'}}>All Countries</h1>
+            <CountryList 
+              newFilter={newFilter} 
+              allCountries={allCountries} 
+              countries={countries} 
+              setCountries={setCountries} />
+          </>} 
+      </> }
     </Fragment>
   )
 }

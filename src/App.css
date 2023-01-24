@@ -10,9 +10,15 @@
 
 
 .region-select-btn:hover {
-  color: rgb(235, 235, 235);
+  color: rgb(255, 255, 255);
+
 }
 
+.region-select-btn:focus,
+.region-select-btn:active {
+  text-decoration: underline;
+  color: #333;
+}
 
 .go-back-btn {
   border: 1px solid #ccc;
